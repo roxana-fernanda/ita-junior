@@ -4,32 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <title>Login</title>
+    <style>
+        body {
+            font-family: "roboto", sans-serif;
+            font-size: 1.9em;
+            background-color: #9fc5e8
+            
+        }
+        .font-style {
+            font-size: 1em;
+            color: #198cff
+        }
+        #email input, #pass input {
+            border-color: #198cff;
+            border-radius: 0.75em;
+            background-color: #9fc5e8
+        }
+        .button {
+            width: 6em;
+            color: #fff;
+            font-size: 1em;
+            border-color: #198cff;
+            border-radius: 0.75em;
+            background-color: #198cff 
+                   
+        }
+        #email label span, #pass label span {
+            font-weight: 1000;
+        }
+        #register {
+            color: #1ca3ec;
+            font-size: 1em;
+        }
+        
+    </style>
 </head>
 <body>
 
     <form action="process.php">
-        <div>
-            <label for="email">Email: </label><br>
-            <input type="email" name="email" id="email" placeholder="Enter a valid email">
+        <div id="email">
+            <label for="email" class="font-style"> <span>Email</span> </label><br>
+            <input type="email" name="email"  placeholder="Enter a valid email">
+        </div>
+        <br>
+        <div id="pass" >
+            <label for="pass" class="font-style"><span>Password</span></label><br>
+            <input type="password" name="password" placeholder="Enter a password">
         </div>
         <br>
         <div>
-            <label for="pass">Password: </label><br>
-            <input type="password" name="password" id="pass" placeholder="Enter a password">
-        </div>
-        <br>
-        <div>
-            <button type="submit">Login</button>
-            <button type="reset">Reset</button>
+            <button type="submit" class="button">Login</button>
+            
         </div>
         <p>
-            <a href="#">Register</a>
+            <a href="#" id="register">Register</a>
         </p>
 
         
     </form>
     
-    <!-- link para cadastro -->
 </body>
 </html>
