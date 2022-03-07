@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <title>Login</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: "roboto", sans-serif;
             font-size: 1.9em;
@@ -22,37 +26,95 @@
         #email input, #pass input {
             border-color: #198cff;
             border-radius: 0.75em;
-            background-color: #9fc5e8
+            background-color: #fff
+        }
+        
+        .button:hover{
+            background: #1ca3ec;
+        }
+        .container {
+            max-width: 7em;
+            margin: 1.9em auto;
+            background-color: #fff;
+            padding: 3em;
+            
+            border: 0.06em solid #dcdcdc;
+            border-radius: 0.75em;
+            
         }
         .button {
+            box-shadow: #002742;
             width: 6em;
             color: #fff;
             font-size: 1em;
             border-color: #198cff;
             border-radius: 0.75em;
-            background-color: #198cff 
-                   
+            background-color: #198cff
+                               
         }
-        #email label span, #pass label span {
+
+        #email label, #pass label {
             font-weight: 1000;
         }
         #register {
             color: #1ca3ec;
             font-size: 1em;
+            text-decoration: none;
+        }
+        #register:hover {
+            text-decoration: underline;
+            color: #c8a2c8;
+        }
+
+        #navbar ul{
+            
+            list-style: none;
+            margin: 0em;
+            padding: 0.5em;
+            background: #002742;
+            overflow: hidden;
         }
         
+        #navbar ul li {
+            float: left;
+            text-align: end;
+        }
+
+        
+
+        #navbar-link {
+            display: flex;
+            padding: 1em;
+            text-align: center;
+            color: #fff;
+            font-size: 0.5em;
+            text-decoration: none;
+        }
+
+        #navbar-link:hover{
+            background: #1ca3ec;
+        }
     </style>
 </head>
 <body>
+    <nav id="navbar">
+        <ul>
+            <li><a href='#' id="navbar-link">Home</a></li>
+            <li><a href='#' id="navbar-link">About</a></li>
+            <li><a href='#' id="navbar-link">Logins</a></li>
 
-    <form action="process.php">
+        </ul>
+    </nav>
+    <form action="process.php" class="container">
+        <img src="./images/login.png" alt="">
+        <br>
         <div id="email">
-            <label for="email" class="font-style"> <span>Email</span> </label><br>
+            <label for="email" class="font-style"> Email </label><br>
             <input type="email" name="email"  placeholder="Enter a valid email">
         </div>
         <br>
         <div id="pass" >
-            <label for="pass" class="font-style"><span>Password</span></label><br>
+            <label for="pass" class="font-style">Password</label><br>
             <input type="password" name="password" placeholder="Enter a password">
         </div>
         <br>
@@ -60,6 +122,7 @@
             <button type="submit" class="button">Login</button>
             
         </div>
+        <br>
         <p>
             <a href="#" id="register">Register</a>
         </p>
